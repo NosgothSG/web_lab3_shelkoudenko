@@ -5,7 +5,7 @@ button {
   margin: 0;
   text-decoration: none;
   background-color: #3c3f43;
-  color: #ffffff;
+  color: #e9e9e9;
   font-family: sans-serif;
   font-size: 1.5rem;
   cursor: pointer;
@@ -29,25 +29,10 @@ button[data-operation]:hover, button[data-equals]:hover {
 button:hover {
   background: #5c5f62;
 }
-button:focus {
-  outline: 1px solid #fff;
-  outline-offset: -4px;
-}
 button:active {
   transform: scale(0.99);
-}
-
-.radius-top-left {
-  border-top-left-radius: 10px;
-}
-.radius-top-right {
-  border-top-right-radius: 10px;
-}
-.radius-bottom-left {
-  border-bottom-left-radius: 10px;
-}
-.radius-bottom-right {
-  border-bottom-right-radius: 10px;
+  outline: 1px solid #fff;
+  outline-offset: -4px;
 }
 
 * {
@@ -57,12 +42,13 @@ button:active {
 }
 
 body {
-  background-color: rgba(196, 196, 196, 0.3490196078);
+  background-color: rgba(196, 196, 196, 0.35);
   color: #000;
   height: 100%;
   font-family: monospace;
   font-size: 24px;
   font-weight: 400;
+  color: #e9e9e9;
 }
 
 .wrapper {
@@ -82,11 +68,36 @@ main {
   position: relative;
   display: grid;
   grid-template-columns: repeat(4, 100px);
+  grid-template-rows: repeat(6, 60px);
   gap: 1px;
+}
+
+.input {
+  padding: 0 12px;
+  font-size: 36px;
+  line-height: 60px;
+  text-align: right;
+  background-color: #262627;
 }
 
 .col-2 {
   grid-column: span 2;
+}
+.col-4 {
+  grid-column: span 4;
+}
+
+.radius-top-left {
+  border-top-left-radius: 10px;
+}
+.radius-top-right {
+  border-top-right-radius: 10px;
+}
+.radius-bottom-left {
+  border-bottom-left-radius: 10px;
+}
+.radius-bottom-right {
+  border-bottom-right-radius: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */
