@@ -160,8 +160,6 @@ class Calculator {
       result = this.firstOperand / this.value;
     }
 
-    console.log(this.firstOperand, this.operation, this.value, "=", result);
-
     if (
       isNaN(result) ||
       !isFinite(result) ||
