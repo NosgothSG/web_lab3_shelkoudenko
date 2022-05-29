@@ -250,9 +250,12 @@ class Calculator {
 const calculator = new Calculator();
 
 window.addEventListener("keyup", (e) => {
-  if (["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", ".", ","].includes(e.key)) {
-    const key = e.key === "." ? "," : e.key;
+  if (["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"].includes(e.key)) {
+    calculator.append(e.key);
+  } else if (["Period", "Comma"].includes(e.code)) {
+    const key = ",";
     const index = calculator.numberButtonsCaptions.findIndex((i) => i === key);
+
     calculator.setActive(calculator.numberButtons[index]);
 
     calculator.append(key);
